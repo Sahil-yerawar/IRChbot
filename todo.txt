@@ -1,0 +1,11 @@
+binary -> decimal 
+decimal -> binary
+ask question
+google query
+imdb rating
+reminder
+say
+shorten url
+dictionary
+weather
+wikipedia term
