@@ -12,6 +12,8 @@ import           Data.Text            (Text)
 import           Data.Aeson.Types     (parseEither)
 import           Data.Attoparsec      (parseOnly)
 import           Data.ByteString      (ByteString)
+import           System.IO.Unsafe
+
 --------------------------------------------------------------------------------
 import           Http
 --------------------------------------------------------------------------------
@@ -60,4 +62,6 @@ parseJsonEither bs = parseOnly json bs >>= parseEither parseJSON
 
 --------------------------------------------------------------------------------
 -- Use = google "text"
-main = google "Eminem"
+
+google` query = s:: Text where
+    s = unsafePerformIO(google query) 
