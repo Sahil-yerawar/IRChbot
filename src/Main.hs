@@ -4,14 +4,17 @@ import Network
 import System.IO
 import Text.Printf
 import Data.List
+import qualified Data.Text as T
 import System.Exit
 import Control.Arrow
 import Control.Monad.Reader
 import Control.Exception
 import Control.Applicative ((<$>))
+import           System.Environment      (getProgName)
 
 import Write
 import IMonad
+import LogText
 ircserver = "irc.freenode.org"
 port   = 6667
 channel   = "#tutbot-testing"
@@ -20,7 +23,8 @@ nick   = "BhadwiAunty"
 -- type Net = ReaderT Bot IO
 -- data Bot = Bot { socket :: Handle }
 
-main :: IO ()
+-- logger <- addLogText "LogFile.log"
+
 main = bracket connect disconnect loop
     where
       disconnect = hClose.socket
@@ -60,7 +64,8 @@ run = do
 
 
 listen :: Handle -> Net ()
-listen h = forever $ do
+listen h = do
+  forever $ do
     s <- init `fmap` io(hGetLine h)
     -- if ping s then pong s else evl (clean s) (sender s) (receiver s)
     privateOrPublic s

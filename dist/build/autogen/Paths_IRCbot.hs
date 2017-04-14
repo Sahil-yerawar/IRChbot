@@ -17,7 +17,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/ysahil/.cabal/bin"
-libdir     = "/home/ysahil/.cabal/lib/x86_64-linux-ghc-7.10.3/IRCbot-0.1.0.0-4bW5qV9ptIqEzKdxFZwKrI"
+libdir     = "/home/ysahil/.cabal/lib/x86_64-linux-ghc-7.10.3/IRCbot-0.1.0.0-6HnEqb06jzA1AfgiWs5qg1"
 datadir    = "/home/ysahil/.cabal/share/x86_64-linux-ghc-7.10.3/IRCbot-0.1.0.0"
 libexecdir = "/home/ysahil/.cabal/libexec"
 sysconfdir = "/home/ysahil/.cabal/etc"
