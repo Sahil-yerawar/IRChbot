@@ -1,8 +1,7 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 module Google
-    ( google,
-    sendertoio
+    ( google
     ) where
 --------------------------------------------------------------------------------
 import           Control.Applicative  ((<$>), (<*>))
@@ -13,8 +12,8 @@ import           Data.Text            (Text)
 import           Data.Aeson.Types     (parseEither)
 import           Data.Attoparsec      (parseOnly)
 import           Data.ByteString      (ByteString)
-import qualified           Data.Text as T
-import qualified           Data.Text.IO as T
+import           System.IO.Unsafe
+
 --------------------------------------------------------------------------------
 import           Http
 --------------------------------------------------------------------------------
@@ -41,11 +40,11 @@ instance FromJSON Item where
     parseJSON _          = mzero
 --------------------------------------------------------------------------------
 -- Returns the Title and URL (as IO text) of the first found link
-google :: Text -> Text -> IO Text
-google query sender= do
+google :: Text -> IO Text
+google query = do
     json <- http url id -- get complete response of searched
     case parseJsonEither json of -- Parse response
-        Right (Result (Item title link : _)) -> textAndUrl title link sender -- textAndUrl = Convert text to a IO TEXT
+        Right (Result (Item title link : _)) -> textAndUrl title link -- textAndUrl = Convert text to a IO TEXT
         -- title link = Right (First) of result and extract title and link
   where
     url = "https://www.googleapis.com/customsearch/v1" <>
@@ -57,12 +56,12 @@ google query sender= do
 -- Parse JSON from a bytestring complete response is a text file and we parse it by json
 -- Either used coz parsed can be error if invalid bytestring
 -- parseonly - parse one at a time { there are multiple {} under items ... parseonly parses one at time}
--- Here return is data (Either a b) = Either String b
+-- Here return is data (Either a b) = Either String b 
 parseJsonEither :: FromJSON a => ByteString -> Either String a
 parseJsonEither bs = parseOnly json bs >>= parseEither parseJSON
 
-sendertoio:: String -> IO Text
-sendertoio sender = return $ T.pack("PRIVMSG " ++ sender ++ " :")
 --------------------------------------------------------------------------------
 -- Use = google "text"
--- main = google "Eminem"
+
+google` query = s:: Text where
+    s = unsafePerformIO(google query) 
