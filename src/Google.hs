@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 module Google
-    ( google
+    ( google1
     ) where
 --------------------------------------------------------------------------------
 import           Control.Applicative  ((<$>), (<*>))
@@ -56,12 +56,11 @@ google query = do
 -- Parse JSON from a bytestring complete response is a text file and we parse it by json
 -- Either used coz parsed can be error if invalid bytestring
 -- parseonly - parse one at a time { there are multiple {} under items ... parseonly parses one at time}
--- Here return is data (Either a b) = Either String b 
+-- Here return is data (Either a b) = Either String b
 parseJsonEither :: FromJSON a => ByteString -> Either String a
 parseJsonEither bs = parseOnly json bs >>= parseEither parseJSON
 
 --------------------------------------------------------------------------------
 -- Use = google "text"
-
-google` query = s:: Text where
-    s = unsafePerformIO(google query) 
+google1 ::Text -> Text
+google1 query = unsafePerformIO(google query)

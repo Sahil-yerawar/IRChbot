@@ -15,6 +15,9 @@ module Write
 import IMonad
 import Google
 import Http
+import FlipRandom
+
+
 import System.IO
 import System.IO.Unsafe
 import Text.Printf
@@ -80,6 +83,8 @@ evalPublic ::String -> String -> String -> Net()
 evalPublic "!quit" y z= write "QUIT" ":Exiting" >> io (exitWith ExitSuccess)
 evalPublic x y z
    | "!id " `isPrefixOf` x  =  msg (drop 4 x) y
+   | x == "!randomCoin "  = rCoin y
+   | x == "!rDie " `isPrefixOf` x = rDie  y
 
 evalPublic _ _ _ = return()
 
@@ -109,6 +114,12 @@ getLocalTime sender = do
   let a = unsafePerformIO(getZonedTime)
   msgPrivate (show a) sender
 
+rCoin :: String -> Net()
+rCoin sender = msg (show (randomInt 0)) sender
+
+rDie :: String -> Net()
+rDie  sender =   msg (show rollDice ) sender
+
 toBin :: Int -> [Int]
 toBin 0 = [0]
 toBin n = reverse(helpBin n)
@@ -133,6 +144,4 @@ bin2dec num sender = do
   msgPrivate (show number) sender
 
 gQuery :: String -> String ->Net()
-gQuery search sender = do
-  h <- asks socket
-  io((google (T.pack search) (T.pack sender)) >>= hPrint h)
+gQuery search sender = msgPrivate (T.unpack (google1 (T.pack search))) sender

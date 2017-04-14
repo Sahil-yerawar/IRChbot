@@ -60,10 +60,10 @@ urlEncode = T.decodeUtf8 . URI.urlEncode True . T.encodeUtf8
 
 --------------------------------------------------------------------------------
 -- Concat text and url and return as IO Text
-textAndUrl :: Text -> Text -> Text -> IO Text
-textAndUrl text url sender= return $ join text url sender
+textAndUrl :: Text -> Text -> IO Text
+textAndUrl text url = return $ join text url
   where
-    join t u s= if T.null t then ("PRIVMSG " <> s <> " :" <> u <>"\r\n") else ("PRIVMSG " <> s <> " :" <> t <> " >> " <> u <> "\r\n")
+    join t u= if T.null t then {-("PRIVMSG " <> s <> " :" <> u <>"\r\n")-} u else {-("PRIVMSG " <> s <> " :" <>-} t <> " >> " <> u
 
 --------------------------------------------------------------------------------
 -- <> is custom symbol = mappend ... combine 2 text

@@ -56,6 +56,13 @@
   (major1) == 2 && (major2) <  6 || \
   (major1) == 2 && (major2) == 6 && (minor) <= 2)
 
+/* package random-1.1 */
+#define VERSION_random "1.1"
+#define MIN_VERSION_random(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  1 || \
+  (major1) == 1 && (major2) == 1 && (minor) <= 0)
+
 /* package text-1.2.2.0 */
 #define VERSION_text "1.2.2.0"
 #define MIN_VERSION_text(major1,major2,minor) (\
@@ -154,5 +161,5 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_PACKAGE_KEY "IRCbo_6HnEqb06jzA1AfgiWs5qg1"
+#define CURRENT_PACKAGE_KEY "IRCbo_Gcs6JGkENvG6SsDLr1XhkX"
 
