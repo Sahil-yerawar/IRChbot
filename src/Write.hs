@@ -20,6 +20,7 @@ import Http
 import FlipRandom
 import CowsAndBulls
 import WeatherForecast
+import Try
 
 --------------------------------------------------------------------------------
 -- | Pre-Defined System Modules
@@ -109,7 +110,7 @@ evalPub message = do
 evalPrivate ::String -> String -> String -> Net()
 evalPrivate "!quit" y z= write "QUIT" ":Exiting" >> io (exitWith ExitSuccess)
 evalPrivate x y z
-  | "!id " `isPrefixOf` x  = msgPrivate (drop 4 x) y
+  | "!echo " `isPrefixOf` x  = msgPrivate (drop 6 x) y
   | "!dec2bin " `isPrefixOf` x = dec2bin (drop 9 x) y
   | "!bin2dec " `isPrefixOf` x = bin2dec (drop 9 x) y
   | "!google " `isPrefixOf` x = gQuery (drop 8 x) y
@@ -117,16 +118,41 @@ evalPrivate x y z
   | "!local_time" `isPrefixOf` x = getLocalTime y
   | x == "!cowsNbulls" = initCnB y
   | "!guess " `isPrefixOf` x = guessNumber (drop 7 x) y
+  | x == "!commands" = dispHelp y
+  | x == "!echo@help" = echHelp y
+  | x == "!dec2bin@help" = d2bHelp y
+  | x == "!bin2dec@help" = b2dHelp y
+  | x == "!google@help" = gHelp y
+  | x == "!gmt_time@help" = gtHelp y
+  | x == "!local_time@help" = ltHelp y
+  | x == "!cowsNBulls@help" = cnbHelp y
+  | x == "!guess@help" = guHelp y
+  | x == "!randomCoin@help" = rcHelp y
+  | x == "!rDie@help" = rdHelp y
+  | x == "!weather" = wHelp y
 evalPrivate _ _ _ = return()
 
 -- | guarded function to decide which private command to execute
 evalPublic ::String -> String -> String -> Net()
 evalPublic "!quit" y z= write "QUIT" ":Exiting" >> io (exitWith ExitSuccess)
 evalPublic x y z
-   | "!id " `isPrefixOf` x  =  msg (drop 4 x) y
+   | "!echo " `isPrefixOf` x  =  msg (drop 6 x) y
    | x == "!randomCoin"  = rCoin y
+   | x == "!local_time"  = getLocalTime' y
    | x == "!rDie"  = rDie  y
    | x == "!weather" = weather y
+   | x == "!commands" = dispHelp' y
+   | x == "!echo@help" = echHelp' y
+   | x == "!dec2bin@help" = d2bHelp' y
+   | x == "!bin2dec@help" = b2dHelp' y
+   | x == "!google@help" = gHelp' y
+   | x == "!gmt_time@help" = gtHelp' y
+   | x == "!local_time@help" = ltHelp' y
+   | x == "!cowsNBulls@help" = cnbHelp' y
+   | x == "!guess@help" = guHelp' y
+   | x == "!randomCoin@help" = rcHelp' y
+   | x == "!rDie@help" = rdHelp' y
+   | x == "!weather" = wHelp' y
 evalPublic _ _ _ = return()
 
 msg :: String->String ->Net ()
@@ -150,6 +176,11 @@ getLocalTime ::String -> Net()
 getLocalTime sender = do
   let a = unsafePerformIO(getZonedTime)
   msgPrivate (show a) sender
+
+getLocalTime' ::String -> Net()
+getLocalTime' sender = do
+  let a = unsafePerformIO(getZonedTime)
+  msg (show a) sender
 
 -- | function to simulate tossing of a coin
 rCoin :: String -> Net()
@@ -175,7 +206,7 @@ guessNumber number sender = if unsafePerformIO(readIORef count) == 0 then msgPri
     let b = getNumList (read number ::Int)
     let c = checkCows b (getNumList (unsafePerformIO(readIORef guessNum))) 3
     let d = (checkBulls b (getNumList (unsafePerformIO(readIORef guessNum)))) - c
-    msgPrivate ("Turn" ++ (intToDigit(11- unsafePerformIO(newNode2 count)):[]) ++ " : "++"Cows = "++ (show c)++"Bulls = "++ (show d)) sender
+    msgPrivate ("Turn " ++ (intToDigit(11- unsafePerformIO(newNode2 count)):[]) ++ " : "++"Cows = "++ (show c)++" Bulls = "++ (show d)) sender
 
 -- | helper function to convert to binary
 toBin :: Int -> [Int]
@@ -210,3 +241,80 @@ gQuery search sender = msgPrivate (T.unpack (google1 (T.pack search))) sender
 -- |function to get current weather
 weather :: String -> Net()
 weather sender = msg (unsafePerformIO(getForeCast)) sender
+
+
+wHelp :: String -> Net()
+wHelp sender = msgPrivate weatherHelp sender
+
+echHelp :: String -> Net()
+echHelp sender = msgPrivate echoHelp sender
+
+dispHelp :: String -> Net()
+dispHelp sender = msgPrivate displayHelp sender
+
+d2bHelp :: String -> Net()
+d2bHelp sender = msgPrivate dec2binHelp sender
+
+b2dHelp :: String -> Net()
+b2dHelp sender = msgPrivate bin2decHelp sender
+
+gHelp :: String -> Net()
+gHelp sender = msgPrivate googleHelp sender
+
+gtHelp :: String -> Net()
+gtHelp sender = msgPrivate gmt_timeHelp sender
+
+ltHelp :: String -> Net()
+ltHelp sender = msgPrivate local_timeHelp sender
+
+cnbHelp :: String -> Net()
+cnbHelp sender = msgPrivate cowsNbullsHelp sender
+
+guHelp :: String -> Net()
+guHelp sender = msgPrivate guesssHelp sender
+
+rcHelp :: String -> Net()
+rcHelp sender = msgPrivate randomCoinHelp sender
+
+rdHelp :: String -> Net()
+rdHelp sender = msgPrivate rDieHelp sender
+
+dispHelp' :: String -> Net()
+dispHelp' sender = msg displayHelp sender
+
+d2bHelp' :: String -> Net()
+d2bHelp' sender = msg dec2binHelp sender
+
+b2dHelp' :: String -> Net()
+b2dHelp' sender = msg bin2decHelp sender
+
+gHelp' :: String -> Net()
+gHelp' sender = msg googleHelp sender
+
+gtHelp' :: String -> Net()
+gtHelp' sender = msg gmt_timeHelp sender
+
+ltHelp' :: String -> Net()
+ltHelp' sender = msg local_timeHelp sender
+
+cnbHelp' :: String -> Net()
+cnbHelp' sender = msg cowsNbullsHelp sender
+
+guHelp' :: String -> Net()
+guHelp' sender = msg guesssHelp sender
+
+rcHelp' :: String -> Net()
+rcHelp' sender = msg randomCoinHelp sender
+
+rdHelp' :: String -> Net()
+rdHelp' sender = msg rDieHelp sender
+
+
+echHelp' :: String -> Net()
+echHelp' sender = msg echoHelp sender
+
+wHelp' :: String -> Net()
+wHelp' sender = msg weatherHelp sender
+
+-- dispHelp :: String -> Net()
+-- dispHelp sender = msgPrivate displayHelp sender

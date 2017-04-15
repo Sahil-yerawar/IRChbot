@@ -1,3 +1,5 @@
+--------------------------------------------------------------------------------
+-- | module for defining functions related to the cows and bulls game
 {-#LANGUAGE ScopedTypeVariables#-}
 {- Cows And Bulls -}
 module CowsAndBulls
@@ -8,7 +10,7 @@ module CowsAndBulls
   checkBulls
   ) where
 
-
+-- | library modules
 import System.IO.Unsafe
 import System.IO
 import Data.List
@@ -16,16 +18,18 @@ import Data.Char
 import Control.Monad (replicateM)
 import System.Random (randomIO, randomRIO, randomR,getStdRandom)
 
+-- | function to check the number of bulls in  the answer digit
 checkBulls :: [Int] -> [Int] -> Int
 checkBulls [] b = 0
 checkBulls (x:xs) b = if x `elem` b then (1+(checkBulls (xs) b)) else (checkBulls (xs) b)
 
-
+-- | function to check the number of cows in the answer digit
 checkCows :: [Int] -> [Int] -> Int -> Int
 checkCows a b 0 = if (a!!0 == b!!0) then 1 else 0
 checkCows a b c = if ((a!!c) == (b!!c)) then (1 + (checkCows a b (c-1)))
                           else (checkCows a b (c-1))
 
+-- | function to convert integer into a list consisiting of its digits
 getNumList ::Int ->  [Int]
 getNumList n = [(div n 1000) `mod` 10 ,(div n 100) `mod` 10 ,(div n 10) `mod` 10 , n `mod` 10 ]
 
@@ -43,6 +47,7 @@ game n l= do
 
 	-- if c == 4 then print ("You Got it Buddy") else game (n-1) l
 {-Some Function Using Random Number Generator -}
+-- | function which returns a  random number generated
 randomNumber :: Int
 randomNumber = unsafePerformIO (getStdRandom (randomR (1023, 9876)))
 
