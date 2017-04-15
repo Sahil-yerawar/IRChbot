@@ -1,0 +1,445 @@
+-- Sample Response for Query = Eminem
+-- See Google Search API
+
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - Eminem",
+    "totalResults": "9",
+    "searchTerms": "Eminem",
+    "count": 9,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "002943966740267007308:oelykrkxqvk"
+   }
+  ]
+ },
+ "context": {
+  "title": "Google"
+ },
+ "searchInformation": {
+  "searchTime": 0.587228,
+  "formattedSearchTime": "0.59",
+  "totalResults": "9",
+  "formattedTotalResults": "9"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "\"eminem\" - Explore - Google Trends",
+   "htmlTitle": "&quot;<b>eminem</b>&quot; - Explore - Google Trends",
+   "link": "https://www.google.co.in/trends/explore?q=%22eminem%22&date=now+7-d&geo=IN",
+   "displayLink": "www.google.co.in",
+   "snippet": "Explore search interest for \"eminem\" by time, location and popularity on Google \nTrends.",
+   "htmlSnippet": "Explore search interest for &quot;<b>eminem</b>&quot; by time, location and popularity on Google <br>\nTrends.",
+   "cacheId": "IDj--DTWyS8J",
+   "formattedUrl": "https://www.google.co.in/trends/explore?q=%22eminem%22...",
+   "htmlFormattedUrl": "https://www.google.co.in/trends/explore?q=%22<b>eminem</b>%22...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "102",
+      "height": "102",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-yKtkuHmtXuGQRQGXM1ZkxuGDV4lpr7oz4GSdKh1FRCVVAzFPZra"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, minimum-scale=1, shrink-to-fit=no",
+      "theme-color": "#4285F4",
+      "twitter:card": "summary",
+      "twitter:site": "@GoogleTrends",
+      "og:title": "Google Trends",
+      "og:description": "Explore search interest for \"eminem\" by time, location and popularity on Google Trends",
+      "og:url": "/trends/explore",
+      "og:image": "https://gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png",
+      "og:image:width": "128",
+      "og:image:height": "128",
+      "og:site_name": "Google Trends"
+     }
+    ],
+    "webpage": [
+     {
+      "name": "Explore search interest for \"eminem\" by time, location and popularity on Google Trends",
+      "description": "Google Trends",
+      "image": "https://gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://gstatic.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Patent US1479370 - Electric arc lamp - Google Patents",
+   "htmlTitle": "Patent US1479370 - Electric arc lamp - Google Patents",
+   "link": "http://www.google.co.in/patents/US1479370",
+   "displayLink": "www.google.co.in",
+   "snippet": "I corm, or Eminem, wAsHINc'i'oN,4 im nEUnEN w. ins'ncx, n.,. i 1,419,310 \nPATENT oFEicE. i. 0F SAN FRANCISCO, CALIFORNIA. ELECTRIC ABC2v \nLAMP.",
+   "htmlSnippet": "I corm, or <b>Eminem</b>, wAsHINc&#39;i&#39;oN,4 im nEUnEN w. ins&#39;ncx, n.,. i 1,419,310 <br>\nPATENT oFEicE. i. 0F SAN FRANCISCO, CALIFORNIA. ELECTRIC ABC2v <br>\nLAMP.",
+   "cacheId": "O5pBUj-W4igJ",
+   "formattedUrl": "www.google.co.in/patents/US1479370",
+   "htmlFormattedUrl": "www.google.co.in/patents/US1479370",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "66",
+      "height": "96",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSHWh4KJXr1Vzh0dPdZfufD2yu55YIMOtkYKnYVN7iPzW5CXiBXSim8tg"
+     }
+    ],
+    "book": [
+     {
+      "description": "www.google.co.in",
+      "url": "http://www.google.co.in/patents/US1479370?utm_source=gb-gplus-share",
+      "name": "Patent US1479370 - Electric arc lamp",
+      "image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.type": "Patent",
+      "dc.title": "Electric arc lamp",
+      "dc.contributor": "Coffin Leslie R",
+      "dc.date": "1917-6-8",
+      "citation_patent_number": "US:1479370",
+      "og:url": "http://www.google.co.in/patents/US1479370",
+      "title": "Patent US1479370 - Electric arc lamp",
+      "og:title": "Patent US1479370 - Electric arc lamp",
+      "og:type": "book",
+      "og:site_name": "Google Books",
+      "og:image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://patentimages.storage.googleapis.com/thumbnails/pages/US1479370-2.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Patent US1079712 - Calculator. - Google Patents",
+   "htmlTitle": "Patent US1079712 - Calculator. - Google Patents",
+   "link": "http://www.google.co.in/patents/US1079712",
+   "displayLink": "www.google.co.in",
+   "snippet": "Sperme-mien -v To all whom, 1' .f may eminem Br: it known that l, *CARL :i \nsuhjeet ot' the Kingr of Great. Britain, residing at. Chicago. in the eonntjv of (foei: :\nind ...",
+   "htmlSnippet": "Sperme-mien -v To all whom, 1&#39; .f may <b>eminem</b> Br: it known that l, *CARL :i <br>\nsuhjeet ot&#39; the Kingr of Great. Britain, residing at. Chicago. in the eonntjv of (foei: :<br>\nind&nbsp;...",
+   "cacheId": "GaENWQkkR10J",
+   "formattedUrl": "www.google.co.in/patents/US1079712",
+   "htmlFormattedUrl": "www.google.co.in/patents/US1079712",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "74",
+      "height": "96",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqMWGxTRv6XZ8tgqYoxVde4IfBxLQh74DabCCvJ6MKoXoSbvTTkpbk"
+     }
+    ],
+    "book": [
+     {
+      "description": "www.google.co.in",
+      "url": "http://www.google.co.in/patents/US1079712?utm_source=gb-gplus-share",
+      "name": "Patent US1079712 - Calculator.",
+      "image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.type": "Patent",
+      "dc.title": "Calculator.",
+      "dc.contributor": "Carl A Meilicke",
+      "dc.date": "1911-4-22",
+      "citation_patent_number": "US:1079712",
+      "og:url": "http://www.google.co.in/patents/US1079712",
+      "title": "Patent US1079712 - Calculator.",
+      "og:title": "Patent US1079712 - Calculator.",
+      "og:type": "book",
+      "og:site_name": "Google Books",
+      "og:image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://patentimages.storage.googleapis.com/thumbnails/pages/US1079712-1.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Patent US1076410 - Combined condenser and feed-water heater ...",
+   "htmlTitle": "Patent US1076410 - Combined condenser and feed-water heater ...",
+   "link": "http://www.google.co.in/patents/US1076410",
+   "displayLink": "www.google.co.in",
+   "snippet": "@ttor/wml en. mural/zang g mfom QTFE@ MARTN L. BUNNAM, 0F MERIDIN, \nMIESSSIEEI. specification f ret-ners rami. llniented To all whom/17' n\" fr,\" eminem\n.'.",
+   "htmlSnippet": "@ttor/wml en. mural/zang g mfom QTFE@ MARTN L. BUNNAM, 0F MERIDIN, <br>\nMIESSSIEEI. specification f ret-ners rami. llniented To all whom/17&#39; n&quot; fr,&quot; <b>eminem</b><br>\n.&#39;.",
+   "cacheId": "2uPVyU72i1oJ",
+   "formattedUrl": "www.google.co.in/patents/US1076410",
+   "htmlFormattedUrl": "www.google.co.in/patents/US1076410",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "66",
+      "height": "96",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnZCSiTA72t-xOJxwsew_p1300uXTszXST9IzhKthaGAVkZ0gZ4Hum9Q"
+     }
+    ],
+    "book": [
+     {
+      "description": "www.google.co.in",
+      "url": "http://www.google.co.in/patents/US1076410?utm_source=gb-gplus-share",
+      "name": "Patent US1076410 - Combined condenser and feed-water heater.",
+      "image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.type": "Patent",
+      "dc.title": "Combined condenser and feed-water heater.",
+      "dc.contributor": "Martin L Dunnam",
+      "dc.date": "1912-9-30",
+      "citation_patent_number": "US:1076410",
+      "og:url": "http://www.google.co.in/patents/US1076410",
+      "title": "Patent US1076410 - Combined condenser and feed-water heater.",
+      "og:title": "Patent US1076410 - Combined condenser and feed-water heater.",
+      "og:type": "book",
+      "og:site_name": "Google Books",
+      "og:image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://patentimages.storage.googleapis.com/thumbnails/pages/US1076410-0.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Google Alerts - Monitor the Web for interesting new content",
+   "htmlTitle": "Google Alerts - Monitor the Web for interesting new content",
+   "link": "https://www.google.co.in/alerts",
+   "displayLink": "www.google.co.in",
+   "snippet": "Monitor the web for interesting new content. How often. As-it-happens. At most \nonce a day. At most once a week. Sources. Automatic. News. Blogs. Web. Video.",
+   "htmlSnippet": "Monitor the web for interesting new content. How often. As-it-happens. At most <br>\nonce a day. At most once a week. Sources. Automatic. News. Blogs. Web. Video.",
+   "cacheId": "a-YP_9qI5wUJ",
+   "formattedUrl": "https://www.google.co.in/alerts",
+   "htmlFormattedUrl": "https://www.google.co.in/alerts",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=no"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Patent US2232879 - Relay - Google Patents",
+   "htmlTitle": "Patent US2232879 - Relay - Google Patents",
+   "link": "http://www.google.co.in/patents/US2232879",
+   "displayLink": "www.google.co.in",
+   "snippet": "I More specicey, it is se oojeo cf 'this :leventime. ce jecvie \"eays which efe \ncheecterized neme sie 'io meet cerfee eminem opeseu'le emol yeeese \nyequiemees, ...",
+   "htmlSnippet": "I More specicey, it is se oojeo cf &#39;this :leventime. ce jecvie &quot;eays which efe <br>\ncheecterized neme sie &#39;io meet cerfee <b>eminem</b> opeseu&#39;le emol yeeese <br>\nyequiemees,&nbsp;...",
+   "cacheId": "5L8HMfcemigJ",
+   "formattedUrl": "www.google.co.in/patents/US2232879",
+   "htmlFormattedUrl": "www.google.co.in/patents/US2232879",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "66",
+      "height": "96",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS2F-sYMXE40igv61Lv2Lrcvp4EJV7SF4FGXiSk1wS-rN3n8A7xUBJGOg"
+     }
+    ],
+    "book": [
+     {
+      "description": "www.google.co.in",
+      "url": "http://www.google.co.in/patents/US2232879?utm_source=gb-gplus-share",
+      "name": "Patent US2232879 - Relay",
+      "image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.type": "Patent",
+      "dc.title": "Relay",
+      "dc.contributor": "Larson Carl H",
+      "dc.date": "1939-5-22",
+      "citation_patent_number": "US:2232879",
+      "og:url": "http://www.google.co.in/patents/US2232879",
+      "title": "Patent US2232879 - Relay",
+      "og:title": "Patent US2232879 - Relay",
+      "og:type": "book",
+      "og:site_name": "Google Books",
+      "og:image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://patentimages.storage.googleapis.com/thumbnails/pages/US2232879-1.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Patent US1641803 - Tractor - Google Patents",
+   "htmlTitle": "Patent US1641803 - Tractor - Google Patents",
+   "link": "http://www.google.co.in/patents/US1641803",
+   "displayLink": "www.google.co.in",
+   "snippet": "... a brake shaft journaled in one side of the body and having a bevel gear \nrotatably mounted thereon intermediate its ends and meshing eminem of \ncorrection.",
+   "htmlSnippet": "... a brake shaft journaled in one side of the body and having a bevel gear <br>\nrotatably mounted thereon intermediate its ends and meshing <b>eminem</b> of <br>\ncorrection.",
+   "cacheId": "82hju-i9J3gJ",
+   "formattedUrl": "www.google.co.in/patents/US1641803",
+   "htmlFormattedUrl": "www.google.co.in/patents/US1641803",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "66",
+      "height": "96",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQhqLLUWwFEtd8w24uaIRK5q0S1b7ir6He9cR5F46T5s63jwjko30DY"
+     }
+    ],
+    "book": [
+     {
+      "description": "www.google.co.in",
+      "url": "http://www.google.co.in/patents/US1641803?utm_source=gb-gplus-share",
+      "name": "Patent US1641803 - Tractor",
+      "image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.type": "Patent",
+      "dc.title": "Tractor",
+      "dc.contributor": "Danly Philo H",
+      "dc.date": "1923-3-22",
+      "citation_patent_number": "US:1641803",
+      "og:url": "http://www.google.co.in/patents/US1641803",
+      "title": "Patent US1641803 - Tractor",
+      "og:title": "Patent US1641803 - Tractor",
+      "og:type": "book",
+      "og:site_name": "Google Books",
+      "og:image": "http://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://patentimages.storage.googleapis.com/thumbnails/pages/US1641803-4.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Patent US20080228733 - Method and System for Determining ...",
+   "htmlTitle": "Patent US20080228733 - Method and System for Determining ...",
+   "link": "https://www.google.co.in/patents/US20080228733",
+   "displayLink": "www.google.co.in",
+   "snippet": "Sep 18, 2008 ... The video may also be found to include, as an underlying soundtrack, the entirety \nof the Eminem's song “Mosh.” [0012]. Another example (long ...",
+   "htmlSnippet": "Sep 18, 2008 <b>...</b> The video may also be found to include, as an underlying soundtrack, the entirety <br>\nof the <b>Eminem&#39;s</b> song “Mosh.” [0012]. Another example (long&nbsp;...",
+   "cacheId": "SmkKlR4KETgJ",
+   "formattedUrl": "https://www.google.co.in/patents/US20080228733",
+   "htmlFormattedUrl": "https://www.google.co.in/patents/US20080228733",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "90",
+      "height": "96",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRzviM5alMbkTneeD6cAP-oOtUf-hTf8oZ_5y1jwX7UMJhArTHUDoFlpg"
+     }
+    ],
+    "book": [
+     {
+      "description": "Metadata determines treatment of content by automated systems, including “user generated content” web sites. The metadata may be conveyed with the content or may be determined by other...",
+      "url": "https://www.google.co.in/patents/US20080228733?utm_source=gb-gplus-share",
+      "name": "Patent US20080228733 - Method and System for Determining Content Treatment",
+      "image": "https://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.type": "Patent",
+      "dc.title": "Method and System for Determining Content Treatment",
+      "dc.contributor": "Bruce L. Davis",
+      "dc.date": "2008-3-13",
+      "dc.description": "Metadata determines treatment of content by automated systems, including “user generated content” web sites. The metadata may be conveyed with the content or may be determined by other techniques, including systems based on digital watermarking or content fingerprinting. In some arrangements, treatment depends on the temporal length of a content excerpt that matches a pre-existing work. In others, treatment depends on popularity—either of the content, or a pre-existing work from which it was derived. A great variety of other factors and contexts can also be considered. Automated tools to preliminarily identify possible “fair use” can be realized; further determination may be made by human evaluators (including crowd-source approaches).",
+      "dc.relation": "US:20020028000:A1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://patentimages.storage.googleapis.com/thumbnails/US20080228733A1/US20080228733A1-20080918-D00002.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Patent WO2010018586A2 - A method and a system for real time ...",
+   "htmlTitle": "Patent WO2010018586A2 - A method and a system for real time ...",
+   "link": "https://www.google.co.in/patents/WO2010018586A2?cl=en",
+   "displayLink": "www.google.co.in",
+   "snippet": "The playback asset can be a video stream (from YouTube or Yahoo! or Eminem \nor other remote source). Alternatively, it can reside on EACH of the participant ...",
+   "htmlSnippet": "The playback asset can be a video stream (from YouTube or Yahoo! or <b>Eminem</b> <br>\nor other remote source). Alternatively, it can reside on EACH of the participant&nbsp;...",
+   "cacheId": "zehj7ttVnmkJ",
+   "formattedUrl": "https://www.google.co.in/patents/WO2010018586A2?cl=en",
+   "htmlFormattedUrl": "https://www.google.co.in/patents/WO2010018586A2?cl=en",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "347",
+      "height": "145",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRMn1g_GGpzLykliC9_vMWV6qX_rKrojcuNyPLh_oMRSrk9dNiDJlAIyJY"
+     }
+    ],
+    "book": [
+     {
+      "description": "A method for language translation of lyrics by subscribers and a database containing synchronization tables. One method includes accessing by subscribers to original lines in English, e.g.,...",
+      "url": "https://www.google.co.in/patents/WO2010018586A2?cl=en&utm_source=gb-gplus-share",
+      "name": "Patent WO2010018586A2 - A method and a system for real time music playback syncronization, dedicated players, locating audio content, following most listened-to lists and phrase searching for...",
+      "image": "https://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.type": "Patent",
+      "dc.title": "A method and a system for real time music playback syncronization, dedicated players, locating audio content, following most listened-to lists and phrase searching for sing-along",
+      "dc.contributor": "Amnon Sarig",
+      "dc.date": "2009-8-13",
+      "dc.description": "A method for language translation of lyrics by subscribers and a database containing synchronization tables. One method includes accessing by subscribers to original lines in English, e.g., filling in the language translation and vocally recording each line, thereby providing an automatic language lesson to any language from any language that has previously been translated. Another embodiment enables subscribers to play music produced by a particular musical artist on a music player dedicated to the artist. The method includes choosing a musical artist to whom said music player will be dedicated, bundling a þnumber of songs of said artist into a music player dedicated to said artist, displaying a listing of the artist's productions and enabling the artist to communicate directly with his portion of the subscribers and enabling a group of local subscribers having playback devices to synchronize a display of song lyrics to a timer.",
+      "dc.relation": "US:20040152054:A1",
+      "citation_patent_publication_number": "WO:2010018586:A2",
+      "citation_patent_application_number": "WO:PCT/IL2009/000804",
+      "og:url": "https://www.google.co.in/patents/WO2010018586A2?cl=en",
+      "title": "Patent WO2010018586A2 - A method and a system for real time music playback syncronization, dedicated players, locating audio content, following most listened-to lists and phrase searching for sing-along",
+      "og:title": "Patent WO2010018586A2 - A method and a system for real time music playback syncronization, dedicated players, locating audio content, following most listened-to lists and phrase searching for sing-along",
+      "og:type": "book",
+      "og:site_name": "Google Books",
+      "og:image": "https://www.google.co.in/patents?id=&printsec=frontcover&img=1&zoom=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://patentimages.storage.googleapis.com/WO2010018586A2/imgf000013_0001.png"
+     }
+    ]
+   }
+  }
+ ]
+}
+-}
